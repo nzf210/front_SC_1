@@ -228,7 +228,7 @@ export default function Home() {
   const getOwner = async () => {
     try {
       const provider = await getProviderOrSigner();
-      const nftContract = new Contract(TOKEN_CONTRACT_ADDRESS, TOKEN_CONTRACT_ABI, provider);
+      //# const nftContract = new Contract(TOKEN_CONTRACT_ADDRESS, TOKEN_CONTRACT_ABI, provider);
       // call the owner function from the contract
       const _owner = await tokenContract.owner();
       // we get signer to extract address of currently connected Metamask account
@@ -298,7 +298,7 @@ export default function Home() {
       // Assign the Web3Modal class to the reference object by setting it's `current` value
       // The `current` value is persisted throughout as long as this page is open
       web3ModalRef.current = new Web3Modal({
-        network: "rinkeby",
+        network: "tesnetwan",
         providerOptions: {},
         disableInjectedProvider: false,
       });
@@ -378,9 +378,9 @@ export default function Home() {
       </Head>
       <div className={styles.main}>
         <div>
-          <h1 className={styles.title}>Welcome to Crypto Wancash ICO!</h1>
+          <h1 className={styles.title}>Welcome to Wancash ICO!</h1>
           <div className={styles.description}>
-            You can claim or mint Crypto Wancash tokens here
+            You can claim or mint Wancash tokens here
           </div>
           {walletConnected ? (
             <div>
